@@ -1,0 +1,65 @@
+<% var data = {
+  title: "V-games | Продажа ваучеров для видеоигр "
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<main class="main-content">
+ 
+    <div class="terms">
+      <div class="container">
+        <div class="terms__wrapper">
+
+          <div class="topPageHeading topPage-block">
+            <h1 class="topPageHeading__heading">
+              Terms and conditions
+            </h1>
+            <div class="topPageHeading__breadcrumbs breadcrumbs">
+              <a href="/" class="breadcrumbs__home">Главная</a> 
+              &#8260;
+              <span class="breadcrumbs__currentPage">Terms and Conditions</span>
+            </div>
+          </div>
+
+
+          <div class="terms__main texts">
+            <p class="texts__paragraph">Hello, and welcome to our Terms and Conditions of Use. This is important and affects your legal rights, so please read them and our Privacy Policy carefully. We hope you’re sitting comfortably. Here we go…</p>
+
+            <ol class="texts__list num-list">
+                <li class="num-list__heading">Introductions</li>
+                  <p class="texts__paragraph">Thanks for choosing Spotify (“Spotify”, “we”, “us”, “our”). By using the Spotify service, websites, or software applications (together, the “Spotify Service” or “Service”), including by purchasing or receiving Codes or Limited Offers, you are entering into a binding contract with our local company in your country of residence (your “Local Country”) if applicable or the company listed in this chart. Your agreement with us includes these Terms and Conditions of Use (“Terms”) and our Privacy Policy (together with the Mobile Terms where applicable, the “Agreements”). If you don’t agree with these Terms, then please don’t use the Service.
+                  </p>
+                  <p class="texts__paragraph">We’re pleased to make our Service available to you. The Spotify Service includes social and interactive features.</p>
+                  
+                  <p class="texts__paragraph">In order to use the Spotify Service, you need to (a) be 18 or older, or be 13 or older and have your parent or guardian’s consent to these Terms, (b) have the power to enter a binding contract with us and are not barred from doing so under any applicable laws, and (c) be resident in the Local Country. You also warrant that any registration information that you submit to Spotify is true, accurate and complete, and you agree to keep it that way at all times.</p>
+                <li class="num-list__heading">Changes to the Agreements</li>
+                <p class="texts__paragraph">Occasionally we may, in our discretion, make changes to the Spotify Service and Agreements. When we make changes to the Agreements that we consider material, we’ll notify you through the Service. By continuing to use the Service after those changes are made, you are expressing and acknowledging your acceptance of the changes.</p>
+                <li class="num-list__heading">Enjoying Spotify
+                    <p class="texts__paragraph">Here’s some information about all the ways you can enjoy Spotify.</p>
+                    <ol class="texts__list num-list">   
+                        <li class="num-list__heading num-list__heading-capitalize">Subscriptions</li>
+                        <p class="texts__paragraph">Spotify account holders may access the Spotify Service by any of our several Subscriptions:</p>
+                        <ul class="texts__listBullet bullet-list">
+                          <li class="mark-list__item">Free Service: an ad-based, free-of-charge service;</li>
+                          <li class="mark-list__item">Unlimited Service: a subscription fee-based service;</li>
+                          <li class="mark-list__item">Premium Service: an ad-free, subscription fee-based service which enables you to listen to music while not connected to the internet, among other features; or</li>
+                          <li class="mark-list__item"> Mobile Service: via a supported mobile handset.</li>
+                        </ul>
+                        <p class="texts__paragraph">The Premium Service permits you to store cached content on up to three (3) personal computers, mobile handsets and/or other relevant devices (collectively “Devices”) while your Premium Service subscription is active. You may not transfer copies of cached content to any other device via any means. By using the Mobile Service, you agree to accept the Mobile Terms and to register for the Service as a mobile subscriber. The Premium Service and the Unlimited Service are hereinafter referred to as “Paid Subscriptions”.</p>
+                    </ol>
+                </li>    
+            </ol>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  
+
+</main>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

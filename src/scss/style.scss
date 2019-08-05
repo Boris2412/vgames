@@ -1,0 +1,1069 @@
+@import "_fonts.scss";
+@import "_colors.scss";
+@import "_typography.scss";
+
+
+
+
+
+
+img {
+  width: 100%;
+}
+
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+
+/*
+- Main page
+header
+nav
+page-info
+banners-blc
+
+- Page Heading + breadcrumbs
+- Lists, paragtaphs styles
+- Terms page
+- Cart page
+*/
+
+
+
+
+
+
+
+/*-- 
+========================== 
+======= Main page ========
+========================== 
+--*/
+
+
+
+
+/*
+header
+*/
+.header {
+  background-color: $V_headerBgColor;
+  height: 55px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  flex: 0 0 auto;
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__left {
+    display: flex;
+  }
+  &__phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 190px;
+    height: 55px;
+  }
+  &__center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.phone {
+  &__link {
+    color: $V_fontColor; 
+    display: block;
+    text-decoration: none;
+    font-size: 0.866rem;
+    &:before {
+      content: "\f095";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 800;
+      margin-right: 10px;
+      display: inline-block;
+      transform: scale(-1, 1);
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/*
+nav
+*/
+.btn-nav {
+  border: 0;
+	background: none;
+	padding: 16px 15px;
+	cursor: pointer;
+  background: $V_greyBg;
+  width: 100%;
+  height: 55px;
+  &_active {
+    position: relative;
+    background: $V_btnActiveColor;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 3px;
+      background: $V_accent;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &:hover:after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 3px;
+    background: $V_accent;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.btn-line {
+  display: block;
+	width: 24px;
+	height: 2px;
+	background: $V_light;
+	margin-bottom: 5px;
+}
+
+.nav {
+  &__block {
+   position: absolute;
+   top: 55px;
+   left: 0;
+   display: flex;
+   flex-direction: column;
+   background: $V_greyBg;
+   padding: 28px;
+   width: 344px;
+  }
+  &__header {
+    width: 100%;
+    font-size: 1.06rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $V_light;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__list {
+    margin: 0;
+    padding-left: 18px;
+    min-width: 150px;
+  }
+  &__item {
+    padding: 8px 0;
+    color: #129ffe;
+  }
+  &__link {
+    color: $V_fontColor;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      color: #129ffe;
+    }
+  }
+  &__gamesCategory {
+    margin-bottom: 14px;
+  }
+}
+
+.nav-header {
+  background: $V_greyBg;
+  display: none;
+}
+
+.nav-open {
+  display: flex;
+}
+/*
+End nav
+*/
+
+
+
+
+
+
+
+.logo {
+  &__romb1 {
+    position: absolute;
+    top: -280px;
+    width: 360px;
+    height: 360px;
+    left: -122px;
+    transform: rotate(45deg);
+    background: #13161a;
+    z-index: -1;
+    -webkit-box-shadow: 0px -2px 120px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow:    0px -2px 120px 0px rgba(0, 0, 0, 0.25);  
+    box-shadow:         0px -2px 120px 0px rgba(0, 0, 0, 0.25);
+  }
+  &__romb2 {
+    position: absolute;
+    top: -276px;
+    left: -112px;
+    width: 340px;
+    height: 340px;
+    transform: rotate(45deg);
+    background: #1d2126;
+    z-index: -1;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow:    0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow:         0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  &__img {
+    margin-top: 20px;
+  }
+}
+
+.right-blocks {
+  display: flex;
+}
+
+.lang-bcl {
+  position: relative;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 100px;
+    cursor: pointer;
+    &:hover:after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      background: $V_accent;
+      bottom: 0;
+      left: 0;
+    }
+    &_active {
+      position: relative;
+      background: $V_btnActiveColor;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: $V_accent;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+  &__flag {
+    width: 19px;
+    height: 18px;
+    display: block;
+    margin-right: 10px;
+  }
+  &__lang {
+    text-transform: uppercase;
+    font-size: 0.866rem;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    &_choose {
+      &:after {
+        content: "\f0dd";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 800;
+        color: $V_light;
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0.733rem;
+      }
+    }
+  }
+}
+
+.ru_ru {
+  background: url("../img/lang_ru.png");
+}
+
+.lang-list {
+  position: absolute;
+  top: 55px;
+  width: 365px;
+  right: 0;
+  display: none;
+  flex-wrap: wrap;
+  background: $V_greyBg;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &__link {
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.866rem;
+    color: $V_fontColor;
+    padding: 16px 18px 10px;
+    &:hover {
+      background: $V_btnActiveColor;
+      color: $V_fontColor;
+    }
+  }
+  &__item {
+    width: 25%;
+  }
+}
+
+.lang-open {
+  display: flex;
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 55px;
+  background: $V_greyBg;
+  cursor: pointer;
+  &__icon {
+    margin: 7px 5px 0 0;
+    &:before {
+    content: "\f07a";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 800;
+    color: $V_light;
+    display: inline-block;
+    font-size: 0.866rem;
+    }
+  }
+  &__counter {
+    position: absolute;
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    top: 13px;
+    left: 30px;
+    background: $V_accent;
+    color: $V_light;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 19px;
+  }
+  &:hover:after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 3px;
+    background: $V_accent;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/*
+End header
+*/
+
+
+
+
+
+/*
+page-info
+*/
+
+.page-info {
+
+  &__wrapper {
+    margin: 180px 0 84px;
+  }
+  &__heading {
+    text-align: center;
+    color: $V_light;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  &__subheading {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}
+
+.text-accent {
+  color: $V_accent;
+}
+
+
+/*
+End page-info
+*/
+
+
+
+
+/*
+banners-blc
+*/
+
+.banners-blc {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__banner {
+    height: 165px;
+    width: 48%;
+    &-size {
+      width: 49%;
+    }
+  }
+  &__heading {
+    font-size: 1.333rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $V_light;
+    margin: 50px 0 10px 30px;
+  }
+  &__subheading {
+    margin-left: 30px;
+  }
+}
+
+.delivery {
+  background: url("../img/bmw_banner.jpg") $V_headerBgColor;
+  background-position: 197px -80px;
+  background-repeat: no-repeat;
+}
+
+.open-hours {
+  background: url("../img/labo_night.jpg") $V_headerBgColor;
+  background-position: 197px -182px;
+  background-repeat: no-repeat;
+}
+
+
+/*
+End banners-blc
+*/
+
+
+
+
+
+
+/*
+slider
+*/
+.items-slider {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: $V_colorLineH2;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__heading {
+    color: $V_light;
+    margin: 0;
+    position: relative;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: $V_accent;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+}
+
+.slider-btn {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  &__left {
+    width: 31px;
+    height: 31px;
+    background: $V_greyBg;
+    border: 0;
+    margin: 0 10px 0 0;
+    &:after {
+      content: "\f053";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 800;
+      display: inline-block;
+      font-size: 0.7rem;
+      color: $V_light;
+    }
+    &:hover {
+      background: $V_accent;
+    }
+  }
+  &__right {
+    width: 31px;
+    height: 31px;
+    background: $V_greyBg;
+    border: 0;
+    &:after {
+      content: "\f054";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 800;
+      display: inline-block;
+      font-size: 0.7rem;
+      color: $V_light;
+    }
+    &:hover {
+      background: $V_accent;
+    }
+  }
+}
+
+
+.slick-slide {
+  width: 218px;
+  margin-right: 20px;
+}
+
+.item {
+  background: $V_headerBgColor;
+  position: relative;
+  &__top {
+
+  }
+  &__linkBlk {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .10);
+    display: none;
+    justify-content: center;
+    align-items: center;  
+  }
+  &__link {
+    color: $V_light;
+    text-transform: uppercase;
+    font-size: 0.933rem;
+    text-decoration: none;
+    background-color: rgba(18, 160, 255, .75);
+    padding: 10px 15px;
+    border: 1px solid $V_light;
+    &:before {
+      content: "\f07a";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 800;
+      color: $V_light;
+      display: inline-block;
+      font-size: 0.700rem;
+      width: 12px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    &:hover {
+      background-color: rgba(18, 160, 255, 1);
+      color: $V_light;
+    }
+  }
+  &__heading {
+    font-size: 1.066rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 14px 0 3px;
+    padding: 0 10px;
+  }
+  &__category {
+    font-size: 0.866rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 0 10px;
+  }
+  &__price {
+    font-size: 1.133rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 4px 0 14px;
+  }
+}
+
+/*
+End slider
+*/
+
+
+
+
+
+
+/*
+Footer
+*/
+.footer {
+  background: url("../img/footer_bg.jpg") no-repeat top center #0a080b;
+  font-size: 0.933rem;
+  flex: 0 0 auto;
+  &__top {
+    display: flex;
+    padding: 70px 0 0;
+  }
+  &__info {
+    width: 32%;
+  }
+  &__nav {
+    width: 62%;
+  }
+  &__heading {
+    font-size: 1.333rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  &__paragraph {
+    font-size: 0.933rem;
+    font-weight: 300;
+    font-style: 1rem;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.866rem;
+    padding: 30px 0;
+  }
+}
+
+
+.nav {
+  &__block {
+
+   &_footer {
+    position: static;
+    background: none;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px 28px 0px;
+    justify-content: space-around;
+   }
+  }
+  &__header {
+    width: 100%;
+    font-size: 1.06rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $V_light;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    &_footer {
+      font-size: 1.333rem;
+      letter-spacing: 0;
+    }
+  }
+  &__row {
+    display: flex;
+  }
+  &__list {
+    margin: 0;
+    padding-left: 18px;
+    min-width: 150px;
+    &_footer {
+      padding-left: 0;
+      list-style-type: none;
+      font-size: 0.933rem;
+      font-weight: 300;
+    }
+  }
+  &__item {
+    padding: 8px 0;
+    color: #129ffe;
+  }
+  &__link {
+    color: $V_fontColor;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      color: #129ffe;
+    }
+  }
+  &__gamesCategory {
+    margin-bottom: 14px;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #4c5159;
+  margin-top: 30px;
+}
+/*
+End Footer
+*/
+
+
+
+
+/*-- 
+=======  End Main Page  =======
+--*/
+
+
+
+
+
+
+
+
+/*-- 
+========================================== 
+======= Page Heading + breadcrumbs =======
+========================================== 
+--*/
+
+.topPageHeading {
+  &__heading {
+    margin: 0;
+    padding: 0;
+    color: $V_light;
+  }
+}
+
+.topPage-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+
+.breadcrumbs {
+  &__home {
+    color: $V_light;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  &__currentPage {
+    color: $V_fontColor;
+    margin-left: 10px;
+  }
+}
+
+/*-- 
+======= End Page Heading + breadcrumbs  =======
+--*/
+
+
+
+
+
+
+
+
+
+/*-- 
+========================================== 
+======= Lists, paragtaphs styles =======
+========================================== 
+--*/
+
+
+.texts {
+  &__paragraph {
+    text-transform: none;
+    font-size: 0.933rem;
+    margin: 16px 0;
+    padding: 0;
+    color: $V_light;
+  }
+  &__list {
+    list-style: none; 
+    counter-reset: li; 
+    font-size: 0.933rem;
+    margin: 0;
+    padding: 0;
+    color: $V_light;
+  }
+  &__listBullet {
+    list-style: none; 
+    margin: 0 0 0 16px;
+    padding: 0;
+  }
+}
+
+
+.num-list {
+  &__heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    &:before { 
+      counter-increment: li; 
+      content: counters(li,".") ". "; 
+    }
+    &-capitalize {
+      text-transform: capitalize;
+    }
+  }
+
+}
+
+.mark-list {
+  &__item {
+    text-transform: none;
+    font-weight: 300;
+  }
+}
+
+/*-- 
+======= End Lists, paragtaphs styles  =======
+--*/
+
+
+
+
+
+
+
+
+
+
+
+/*-- 
+========================== 
+======= Terms page =======
+========================== 
+--*/
+
+.terms {
+  &__wrapper {
+    margin: 93px 0 55px;
+  }
+}
+
+/*-- 
+======= End Terms page =======
+--*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- 
+========================== 
+======= Cart page ========
+========================== 
+--*/
+
+.cart-page {
+  &__wrapper {
+    margin: 93px 0 0;
+  }
+}
+
+
+
+.cart-goods {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.cart-item {
+  width: 49%;
+  display: flex;
+  justify-content: space-between; 
+  height: 105px;
+  background-color: $V_headerBgColor;
+  margin: 10px 0;
+  align-items: center;
+
+  &__pic {
+    width: 20%;
+  }
+  &__info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__heading {
+    overflow: hidden;
+    height: 17px;
+    width: 100%;
+  }
+  &__name {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $V_light;
+    font-size: 1.066rem;
+  }
+  &__category {
+    font-size: 0.866rem;
+  }
+  &__price {
+    align-self: flex-end;
+    font-size: 1.133rem;
+    font-weight: bold;
+    color: $V_light;
+    display: flex;
+    align-items: center;
+  }
+  &__close {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__picBlk {
+    width: 89px;
+    height: 89px;
+    margin: 7px;
+  }
+  &__picGame {
+    width: 100%;
+    height: 100%;
+  }
+  &__clsBtn {
+    width: 31px;
+    height: 31px;
+    background: none;
+    border: 0;
+    &:after {
+      content:"\f00d";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 800;
+      display: inline-block;
+      font-size: 1rem;
+      color: $V_light;
+    }
+    &:hover:after {
+      color: $V_accent;
+      cursor: pointer;
+    }
+  }
+}
+
+.cart-order {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 30px 0;
+  &__btn {
+    color: $V_light;
+    text-transform: uppercase;
+    font-size: 0.933rem;
+    text-decoration: none;
+    background-color: rgba(18, 160, 255, .75);
+    padding: 10px 15px;
+    border: 1px solid $V_light;
+    font-weight: 600;
+  &:hover {
+    background-color: rgba(18, 160, 255, 1);
+    color: $V_light; 
+  }
+  }
+  &__price {
+    margin-left: 25px;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 0.933rem;
+    color: $V_light;
+  }
+  &__amount {
+    font-size: 1.133rem;
+    font-weight: bold;
+    color: $V_light;
+    margin-left: 8px;
+  }
+}
+
+.banners-cart {
+  margin: 20px 0 60px;
+}
+
+/*-- 
+======= End Cart page =======
+--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+Media
+*/
+@import "_media.scss";
